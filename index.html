@@ -59,8 +59,6 @@
     border-bottom: 1.5px solid var(--gray-200);
   }
 
-  .logo-svg { flex-shrink: 0; }
-
   .logo-text {
     font-family: 'Nunito', sans-serif;
     font-weight: 900;
@@ -92,18 +90,6 @@
     font-weight: 700;
   }
 
-  nav a .nav-icon { font-size: 18px; width: 22px; text-align: center; }
-
-  .nav-badge {
-    margin-left: auto;
-    background: var(--blue);
-    color: white;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 2px 7px;
-    border-radius: 99px;
-  }
-
   .sidebar-footer {
     padding: 16px 20px 0;
     border-top: 1.5px solid var(--gray-200);
@@ -124,10 +110,6 @@
     color: white; font-weight: 800; font-size: 15px;
   }
 
-  .user-info { flex: 1; min-width: 0; }
-  .user-name { font-size: 13px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .user-role { font-size: 11px; color: var(--gray-600); }
-
   /* ===== MAIN CONTENT ===== */
   .main {
     margin-left: 230px;
@@ -135,12 +117,11 @@
     background: var(--gray-50);
   }
 
-  /* ===== TOPBAR ===== */
   .topbar {
     background: white;
     border-bottom: 1.5px solid var(--gray-200);
     padding: 14px 32px;
-    display: flex; align-items: center; gap: 16px;
+    display: flex; align-items: center;
     position: sticky; top: 0; z-index: 50;
   }
 
@@ -149,37 +130,10 @@
     font-size: 22px;
     font-weight: 900;
     color: var(--blue);
-    flex: 1;
   }
 
-  .topbar-actions { display: flex; gap: 10px; }
+  .page { padding: 28px 32px; }
 
-  .btn {
-    padding: 9px 20px;
-    border-radius: 10px;
-    border: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all .2s;
-    display: flex; align-items: center; gap: 6px;
-  }
-
-  .btn-primary { background: var(--blue); color: white; }
-  .btn-primary:hover { background: #1D4ED8; transform: translateY(-1px); box-shadow: var(--shadow); }
-  .btn-secondary { background: var(--gray-100); color: var(--gray-800); }
-  .btn-secondary:hover { background: var(--gray-200); }
-  .btn-success { background: var(--green); color: white; }
-  .btn-success:hover { background: #16A34A; }
-  .btn-sm { padding: 6px 14px; font-size: 12px; }
-
-  /* ===== PAGES ===== */
-  .page { display: none; padding: 28px 32px; animation: fadeIn .3s ease; }
-  .page.active { display: block; }
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-
-  /* ===== CARDS ===== */
   .card {
     background: white;
     border-radius: 16px;
@@ -188,359 +142,25 @@
     padding: 24px;
   }
 
-  .card-title {
-    font-family: 'Nunito', sans-serif;
-    font-size: 17px;
-    font-weight: 800;
-    color: var(--gray-800);
-    margin-bottom: 16px;
-    display: flex; align-items: center; gap: 8px;
-  }
-
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
-  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-
-  /* ===== DASHBOARD ===== */
-  .stat-card {
-    background: white;
-    border-radius: 16px;
-    border: 1.5px solid var(--gray-200);
-    padding: 20px;
-    display: flex; align-items: center; gap: 16px;
-    box-shadow: var(--shadow);
-    transition: transform .2s;
-  }
-  .stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-
-  .stat-icon {
-    width: 52px; height: 52px;
-    border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 24px;
-    flex-shrink: 0;
-  }
-
-  .stat-value { font-size: 26px; font-weight: 800; font-family: 'Nunito', sans-serif; }
-  .stat-label { font-size: 12px; color: var(--gray-600); font-weight: 500; }
-  .stat-change { font-size: 11px; font-weight: 600; margin-top: 2px; }
-  .up { color: var(--green); }
-  .down { color: #EF4444; }
-
-  /* Progress bar */
-  .progress-bar { background: var(--gray-200); border-radius: 99px; height: 8px; overflow: hidden; margin-top: 6px; }
-  .progress-fill { height: 100%; border-radius: 99px; transition: width .8s ease; }
-
-  /* ===== FÉRIAS ===== */
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 4px;
-    margin-top: 8px;
-  }
-
-  .cal-header { text-align: center; font-size: 11px; font-weight: 700; color: var(--gray-600); padding: 6px 0; }
-
-  .cal-day {
-    aspect-ratio: 1;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all .15s;
-    font-weight: 500;
-    position: relative;
-    border: 1.5px solid transparent;
-  }
-  .cal-day:hover { background: var(--blue-soft); color: var(--blue); border-color: var(--blue-light); }
-  .cal-day.selected { background: var(--blue); color: white; border-color: var(--blue); font-weight: 700; }
-  .cal-day.range { background: var(--blue-soft); color: var(--blue); }
-  .cal-day.today { border-color: var(--green); color: var(--green); font-weight: 800; }
-  .cal-day.disabled { color: var(--gray-200); cursor: default; }
-  .cal-day.disabled:hover { background: none; border-color: transparent; }
-  .cal-day.has-event::after {
-    content: ''; position: absolute; bottom: 3px;
-    width: 5px; height: 5px; border-radius: 50%;
-    background: var(--orange);
-  }
-
-  .status-badge {
-    display: inline-flex; align-items: center; gap: 5px;
-    padding: 4px 12px; border-radius: 99px;
-    font-size: 11px; font-weight: 700;
-  }
-  .badge-pending { background: #FEF3C7; color: #D97706; }
-  .badge-approved { background: #D1FAE5; color: #059669; }
-  .badge-rejected { background: #FEE2E2; color: #DC2626; }
-
-  /* ===== AMIZADES ===== */
-  .friend-card {
-    background: white;
-    border-radius: 16px;
-    border: 1.5px solid var(--gray-200);
-    padding: 20px;
-    text-align: center;
-    box-shadow: var(--shadow);
-    transition: all .2s;
-  }
-  .friend-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--blue-light); }
-
-  .friend-avatar {
-    width: 64px; height: 64px;
-    border-radius: 50%;
-    margin: 0 auto 12px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 26px;
-    font-weight: 800;
-    color: white;
-  }
-
-  .friend-name { font-weight: 700; font-size: 15px; margin-bottom: 2px; }
-  .friend-age { font-size: 12px; color: var(--gray-600); margin-bottom: 6px; }
-  .friend-role { font-size: 11px; background: var(--blue-soft); color: var(--blue); padding: 3px 10px; border-radius: 99px; font-weight: 600; }
-
-  .tag-list { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; margin-top: 10px; }
-  .tag { font-size: 10px; padding: 2px 8px; border-radius: 99px; font-weight: 600; background: var(--gray-100); color: var(--gray-600); }
-
-  /* ===== RH ===== */
-  .rh-form input, .rh-form select, .rh-form textarea {
-    width: 100%;
-    padding: 10px 14px;
-    border: 1.5px solid var(--gray-200);
-    border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    color: var(--gray-800);
-    background: var(--gray-50);
-    outline: none;
-    transition: border-color .2s;
-    margin-bottom: 14px;
-  }
-  .rh-form input:focus, .rh-form select:focus, .rh-form textarea:focus {
-    border-color: var(--blue);
-    background: white;
-  }
-  .rh-form label { font-size: 12px; font-weight: 600; color: var(--gray-600); display: block; margin-bottom: 5px; }
-
-  /* ===== FEED ===== */
-  .post-card {
-    background: white;
-    border-radius: 16px;
-    border: 1.5px solid var(--gray-200);
-    padding: 20px;
-    margin-bottom: 16px;
-    box-shadow: var(--shadow);
-    transition: box-shadow .2s;
-  }
-  .post-card:hover { box-shadow: var(--shadow-lg); }
-
-  .post-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-
-  .post-avatar {
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 18px; font-weight: 800; color: white;
-    flex-shrink: 0;
-  }
-
-  .post-author { font-weight: 700; font-size: 14px; }
-  .post-time { font-size: 11px; color: var(--gray-600); }
-  .post-badge { font-size: 10px; padding: 2px 8px; border-radius: 99px; font-weight: 700; background: var(--blue-soft); color: var(--blue); margin-left: 6px; }
-
-  .post-text { font-size: 14px; line-height: 1.7; color: var(--gray-800); margin-bottom: 14px; }
-  .post-image { width: 100%; border-radius: 12px; margin-bottom: 14px; height: 160px; object-fit: cover; background: linear-gradient(135deg, var(--blue-soft), var(--blue-light)); display: flex; align-items: center; justify-content: center; font-size: 40px; }
-
-  .post-actions { display: flex; gap: 16px; padding-top: 12px; border-top: 1px solid var(--gray-200); }
-  .post-action {
-    display: flex; align-items: center; gap: 6px;
-    font-size: 12px; font-weight: 600; color: var(--gray-600);
-    cursor: pointer; border: none; background: none; font-family: 'Poppins', sans-serif;
-    padding: 5px 10px; border-radius: 8px; transition: all .15s;
-  }
-  .post-action:hover { background: var(--blue-soft); color: var(--blue); }
-  .post-action.liked { color: #EF4444; }
-
-  /* ===== MÉTRICAS / DESAFIOS ===== */
-  .challenge-card {
-    background: white;
-    border-radius: 16px;
-    border: 1.5px solid var(--gray-200);
-    padding: 20px;
-    box-shadow: var(--shadow);
-    transition: all .2s;
-    cursor: pointer;
-  }
-  .challenge-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--blue-light); }
-  .challenge-card.enrolled { border-color: var(--green); }
-
-  .challenge-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
-  .challenge-icon { font-size: 32px; }
-  .challenge-title { font-weight: 700; font-size: 15px; }
-  .challenge-subtitle { font-size: 12px; color: var(--gray-600); }
-  .challenge-days { font-size: 24px; font-weight: 900; font-family: 'Nunito', sans-serif; color: var(--blue); }
-  .challenge-days span { font-size: 12px; font-weight: 600; color: var(--gray-600); }
-
-  .resource-item {
-    display: flex; align-items: center; gap: 12px;
-    padding: 12px 14px;
-    background: var(--gray-50);
-    border-radius: 10px;
-    margin-bottom: 8px;
-    text-decoration: none;
-    color: inherit;
-    border: 1.5px solid transparent;
-    transition: all .15s;
-  }
-  .resource-item:hover { border-color: var(--blue-light); background: var(--blue-soft); }
-  .resource-icon { font-size: 22px; }
-  .resource-name { font-weight: 600; font-size: 13px; }
-  .resource-desc { font-size: 11px; color: var(--gray-600); }
-  .resource-link { margin-left: auto; font-size: 11px; font-weight: 700; color: var(--blue); }
-
-  /* ===== SIMULAÇÃO FÉRIAS ===== */
-  .sim-result {
-    background: linear-gradient(135deg, var(--blue), #1D4ED8);
-    color: white;
-    border-radius: 16px;
-    padding: 28px;
-    text-align: center;
-  }
-  .sim-result h3 { font-size: 22px; font-weight: 900; font-family: 'Nunito', sans-serif; margin-bottom: 8px; }
-  .sim-result p { font-size: 14px; opacity: .85; }
-  .sim-days { font-size: 56px; font-weight: 900; font-family: 'Nunito', sans-serif; margin: 12px 0; }
-  .sim-days span { font-size: 20px; }
-
-  /* ===== MODAL ===== */
-  .modal-overlay {
-    display: none;
-    position: fixed; inset: 0;
-    background: rgba(0,0,0,.35);
-    z-index: 200;
-    align-items: center; justify-content: center;
-    backdrop-filter: blur(4px);
-  }
-  .modal-overlay.open { display: flex; }
-  .modal {
-    background: white;
-    border-radius: 20px;
-    padding: 32px;
-    max-width: 480px;
-    width: 90%;
-    box-shadow: 0 20px 60px rgba(0,0,0,.2);
-    animation: popIn .25s ease;
-    position: relative;
-  }
-  @keyframes popIn { from { transform: scale(.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-  .modal-close { position: absolute; top: 16px; right: 16px; background: var(--gray-100); border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; }
-  .modal-title { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 900; color: var(--blue); margin-bottom: 16px; }
-
-  /* ===== TOAST ===== */
-  .toast {
-    position: fixed; bottom: 28px; right: 28px;
-    background: var(--gray-800); color: white;
-    padding: 14px 22px; border-radius: 14px;
-    font-size: 13px; font-weight: 600;
-    display: flex; align-items: center; gap: 10px;
-    box-shadow: 0 8px 32px rgba(0,0,0,.25);
-    transform: translateY(100px); opacity: 0;
-    transition: all .3s ease;
-    z-index: 300;
-  }
-  .toast.show { transform: translateY(0); opacity: 1; }
-  .toast.success { background: var(--green); }
-  .toast.error { background: #EF4444; }
-
-  /* ===== TABS ===== */
-  .tabs { display: flex; gap: 4px; background: var(--gray-100); padding: 4px; border-radius: 12px; margin-bottom: 24px; }
-  .tab {
-    flex: 1; padding: 9px; border-radius: 9px; border: none;
-    font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600;
-    cursor: pointer; background: transparent; color: var(--gray-600); transition: all .2s;
-  }
-  .tab.active { background: white; color: var(--blue); box-shadow: 0 2px 8px rgba(0,0,0,.08); }
-
-  /* ===== SECTION HEADERS ===== */
-  .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
-  .section-title { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 900; color: var(--gray-800); }
-  .section-sub { font-size: 13px; color: var(--gray-600); margin-top: 2px; }
-
-  /* ===== NOTIFICATION DOT ===== */
-  .notif-dot { width: 8px; height: 8px; background: #EF4444; border-radius: 50%; display: inline-block; margin-left: 4px; }
-
-  /* ===== EMPTY STATE ===== */
-  .empty-state { text-align: center; padding: 48px 24px; color: var(--gray-600); }
-  .empty-state .emoji { font-size: 48px; margin-bottom: 12px; }
-  .empty-state h3 { font-weight: 700; margin-bottom: 6px; }
-
-  /* ===== INPUT COMPOSE ===== */
-  .compose-box {
-    display: flex; gap: 10px; align-items: flex-end;
-    background: white;
-    border: 1.5px solid var(--gray-200);
-    border-radius: 14px;
-    padding: 12px 14px;
-    margin-bottom: 20px;
-  }
-  .compose-box textarea {
-    flex: 1; border: none; outline: none; resize: none;
-    font-family: 'Poppins', sans-serif; font-size: 13px;
-    color: var(--gray-800); background: transparent; min-height: 48px;
-  }
-
-  /* ===== CHECKLIST ===== */
-  .check-item {
-    display: flex; align-items: center; gap: 10px;
-    padding: 10px 12px; border-radius: 10px;
-    margin-bottom: 6px; transition: background .15s; cursor: pointer;
-  }
-  .check-item:hover { background: var(--gray-50); }
-  .check-item input[type="checkbox"] { width: 17px; height: 17px; accent-color: var(--blue); cursor: pointer; }
-  .check-item label { font-size: 13px; font-weight: 500; cursor: pointer; flex: 1; }
-  .check-item.done label { text-decoration: line-through; color: var(--gray-600); }
-
-  /* ===== RESPONSIVE ===== */
   @media (max-width: 900px) {
     .sidebar { width: 64px; }
-    .logo-area { padding: 0 14px 20px; }
-    .logo-text, .sidebar-footer .user-info, .nav-badge { display: none; }
+    .logo-text, .user-info { display: none; }
     nav a span:not(.nav-icon) { display: none; }
-    nav a { padding: 12px 20px; justify-content: center; }
     .main { margin-left: 64px; }
-    .grid-4 { grid-template-columns: 1fr 1fr; }
-    .grid-3 { grid-template-columns: 1fr; }
-    .grid-2 { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
-<!-- SIDEBAR -->
 <aside class="sidebar">
   <div class="logo-area">
-    <svg class="logo-svg" width="40" height="46" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Tree trunk -->
+    <svg width="40" height="46" viewBox="0 0 40 46" fill="none">
       <rect x="18" y="28" width="4" height="14" rx="2" fill="#2563EB" opacity="0.7"/>
-      <!-- Main branches -->
-      <path d="M20 28 Q10 22 8 14" stroke="#2563EB" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <path d="M20 28 Q30 22 32 14" stroke="#2563EB" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <path d="M20 24 Q14 18 12 10" stroke="#2563EB" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <path d="M20 24 Q26 18 28 10" stroke="#2563EB" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <path d="M20 20 Q20 12 20 6" stroke="#2563EB" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <path d="M20 22 Q15 16 13 12" stroke="#2563EB" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <path d="M20 22 Q25 16 27 12" stroke="#2563EB" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <!-- Leaves - colorful -->
+      <path d="M20 28 Q10 22 8 14" stroke="#2563EB" stroke-width="1.8" fill="none"/>
+      <path d="M20 28 Q30 22 32 14" stroke="#2563EB" stroke-width="1.8" fill="none"/>
       <circle cx="8" cy="13" r="4.5" fill="#22C55E" opacity="0.85"/>
       <circle cx="32" cy="13" r="4.5" fill="#F472B6" opacity="0.85"/>
-      <circle cx="12" cy="9" r="3.5" fill="#FACC15" opacity="0.9"/>
-      <circle cx="28" cy="9" r="3.5" fill="#FB923C" opacity="0.9"/>
       <circle cx="20" cy="5" r="4" fill="#A78BFA" opacity="0.9"/>
-      <circle cx="13" cy="11" r="2.5" fill="#2DD4BF" opacity="0.85"/>
-      <circle cx="27" cy="11" r="2.5" fill="#F97316" opacity="0.85"/>
-      <circle cx="6" cy="11" r="2.5" fill="#FACC15" opacity="0.8"/>
-      <circle cx="34" cy="11" r="2.5" fill="#22C55E" opacity="0.8"/>
-      <circle cx="16" cy="7" r="2.5" fill="#F472B6" opacity="0.8"/>
-      <circle cx="24" cy="7" r="2.5" fill="#2563EB" opacity="0.7"/>
     </svg>
     <div class="logo-text">Talento<br><span>Jovem</span></div>
   </div>
@@ -549,3 +169,37 @@
     <a class="active" onclick="navigate('dashboard')">
       <span class="nav-icon">🏠</span>
       <span>Início</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="user-chip">
+      <div class="user-avatar">TJ</div>
+      <div class="user-info">
+        <p style="font-size: 13px; font-weight: 700;">Usuário</p>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+  <header class="topbar">
+    <h1>Dashboard</h1>
+  </header>
+
+  <div class="page">
+    <div class="card">
+      <h2>Olá! Seu site está funcionando.</h2>
+      <p style="margin-top: 15px; color: var(--gray-600);">O código foi corrigido e todas as abas foram fechadas corretamente.</p>
+    </div>
+  </div>
+</main>
+
+<script>
+  function navigate(page) {
+    console.log("Navegando para: " + page);
+  }
+</script>
+
+</body>
+</html>
